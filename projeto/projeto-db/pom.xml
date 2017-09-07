@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project  xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>br.com.vortice</groupId>
+	<artifactId>estudo-db</artifactId>
+	<version>1.0</version>
+	<packaging>jar</packaging>
+	
+	<dependencies>
+		
+		
+	</dependencies>
+	
+	
+	<build>
+		
+		<plugins>
+			
+			<plugin>
+				<groupId>org.flywaydb</groupId>
+                <artifactId>flyway-maven-plugin</artifactId>
+                <version>3.0</version>
+				<configuration>
+					<url>jdbc:postgresql://192.168.99.100:32769/testes</url>
+					<user>postgres</user>
+					<password>sa102101</password>
+				</configuration>
+
+				<dependencies>
+					<dependency>
+						<groupId>org.postgresql</groupId>
+						<artifactId>postgresql</artifactId>
+						<version>9.3-1102-jdbc4</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+		</plugins>
+		
+	</build>
+	
+</project>
